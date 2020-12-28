@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="MissingConstraints"
+    tools:context=".ui.activity.EditAddressActivity"
+    android:background="@color/colorPageBG"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@color/colortheme"
+        app:titleTextColor="#ffffff">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:padding="14dp"
+                android:src="@mipmap/icon_back"/>
+            <TextView
+                android:id="@+id/tv_toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/font_20sp"
+                android:padding="4dp"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:text="选择地址"/>
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_margin="@dimen/qb_px_10"
+            android:textSize="@dimen/font_18sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="地    址"
+            />
+
+        <TextView
+            android:id="@+id/tv_chooseadd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray"
+            android:text="选择地址  >"
+            android:textSize="@dimen/font_16sp"
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:layout_marginLeft="@dimen/qb_px_50"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_margin="@dimen/qb_px_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="门牌号"
+            android:textSize="@dimen/font_18sp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:layout_marginLeft="@dimen/qb_px_50"            android:id="@+id/et_num"
+            android:layout_weight="1"
+            android:hint="单元，门号 如:6单元606"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_16sp"
+            android:background="@null"
+
+            />
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="联系人"
+            android:layout_gravity="center_vertical"
+            android:textSize="@dimen/font_18sp"
+            android:textColor="@color/black"
+            android:layout_margin="@dimen/qb_px_10"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <EditText
+                android:id="@+id/et_PersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/font_16sp"
+                android:background="@null"
+                android:hint="姓名"
+                android:layout_marginTop="@dimen/qb_px_10"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:layout_marginBottom="@dimen/qb_px_10"
+                />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/grey"
+                ></View>
+
+            <RadioGroup
+                android:layout_marginTop="@dimen/qb_px_10"
+                android:layout_marginLeft="@dimen/qb_px_50"
+                android:id="@+id/radiogroup"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <RadioButton
+                    android:id="@+id/radioman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="1"
+                    android:checked="true"
+                    android:text="先生" />
+
+                <RadioButton
+                    android:id="@+id/radiowen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:tag="0"
+                    android:text="女士" />
+            </RadioGroup>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+
+    <LinearLayout
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电    话"
+            android:layout_margin="@dimen/qb_px_10"
+
+            android:textSize="@dimen/font_18sp"
+            android:textColor="@color/black"
+            />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_16sp"
+            android:background="@null"
+            android:layout_marginTop="@dimen/qb_px_10"
+            android:layout_marginLeft="@dimen/qb_px_50"
+
+            />
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/font_18sp"
+            android:textColor="@color/black"
+            android:text="设为默认位置"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/qb_px_10"
+            />
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/qb_px_10"
+
+            />
+
+
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    <Button
+        android:id="@+id/bt_saveaddr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/qb_px_20"
+        android:background="@drawable/shape_release_now"
+        android:text="保存使用"
+        android:textSize="@dimen/font_24sp"
+        />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <TextView
+        android:layout_margin="@dimen/qb_px_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="常用地址"
+        />
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"
+        ></View>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>
