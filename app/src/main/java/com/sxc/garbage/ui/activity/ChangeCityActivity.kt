@@ -20,23 +20,26 @@ import com.sxc.garbage.ui.utils.PinyinUtils
 import com.sxc.garbage.ui.utils.ReadAssetsFileUtil
 import com.sxc.garbage.ui.view.SideLetterBar
 import kotlinx.android.synthetic.main.activity_change_city.*
+import kotlinx.android.synthetic.main.toolbar_layout.*
 import kotlinx.coroutines.launch
 import java.util.*
 
 class ChangeCityActivity : BaseActivity() {
-    private var mDataStorePre: DataStore<Preferences>? = null
     private lateinit var mCityAdapter: CityListAdapter
-    private val DATASTORE_PREFERENCE_NAME = "DataStorePreference"//定义 DataStore 的名字
+    override fun getLayoutId(): Int {
+        return R.layout.activity_change_city
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_change_city)
-        
         init()
     }
 
     private fun init() {
+        tv_toolbar_title.text="选择城市"
 
         side_letter_bar.setOverlay(tv_letter_overlay)
         side_letter_bar.setOnLetterChangedListener(object : SideLetterBar.OnLetterChangedListener {
@@ -50,11 +53,6 @@ class ChangeCityActivity : BaseActivity() {
         listview_all_city.setAdapter(mCityAdapter)
 
 
-        //初始化数据库
-        mDataStorePre = this.createDataStore(
-            name = DATASTORE_PREFERENCE_NAME
-        )
-
     }
 
 
@@ -64,6 +62,7 @@ class ChangeCityActivity : BaseActivity() {
             override  fun onCityClick(name: String?) { //选择城市
                 Toast.makeText(this@ChangeCityActivity, name, Toast.LENGTH_SHORT).show()
                 if (name != null) {
+
                 }
 
             }

@@ -12,9 +12,7 @@ class MyApplication :Application(){
         mContext = getApplicationContext();
     }
 
-    open fun getContext(): Context? {
-        return mContext
-    }
+
 
 }
 

@@ -44,17 +44,7 @@ abstract class BaseFragment:Fragment() {
     }
 
 
-    open suspend fun readPreInfo(keyName:String): String {
-        var preKey = preferencesKey<String>(keyName)
-        var value = this.mDataStorePre?.data?.map { preferences ->
-            preferences[preKey] ?: ""
-        }
-        if (value != null) {
-            return value.first()
-        }
 
-        return "null"
-    }
     fun TextView.checkBlank(message: String): String? {
         val text = this.text.toString()
         if (text.isBlank()) {

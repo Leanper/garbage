@@ -18,8 +18,10 @@ import kotlinx.coroutines.flow.map
 
 abstract class BaseActivity: AppCompatActivity() {
 
+    abstract fun getLayoutId():Int
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
+        setContentView(getLayoutId())
 
 
     }

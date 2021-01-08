@@ -17,6 +17,9 @@ import kotlinx.android.synthetic.main.fragment_release.*
 
 class EditAddressActivity : BaseActivity() {
     var csex:Int=1
+    override fun getLayoutId(): Int {
+        return R.layout.activity_edit_address
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

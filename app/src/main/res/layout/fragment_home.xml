@@ -12,7 +12,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:background="@color/teal_200"
+        android:background="@color/colortheme"
         app:titleTextColor="#ffffff"
         tools:ignore="MissingConstraints">
 
@@ -29,7 +29,8 @@
                 android:gravity="center"
                 android:padding="4dp"
                 android:text="北京"
-                android:textColor="#000"
+                android:drawableRight="@mipmap/icon_arrow"
+                android:textColor="@color/white"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"

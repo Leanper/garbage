@@ -89,7 +89,7 @@ class MainActivity : AppCompatActivity() {
 
         }
         //设置小红点数目
-        menoBootomView.setCount(ID_HOME,"3")
+//        menoBootomView.setCount(ID_HOME,"0")
 
 
 

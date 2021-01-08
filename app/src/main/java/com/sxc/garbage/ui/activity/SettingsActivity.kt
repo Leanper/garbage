@@ -12,6 +12,9 @@ import kotlinx.android.synthetic.main.settings_activity.*
 import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class SettingsActivity : BaseActivity(), View.OnClickListener {
+    override fun getLayoutId(): Int {
+        return R.layout.settings_activity
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

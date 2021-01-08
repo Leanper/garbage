@@ -30,9 +30,6 @@ class HomeFragment :BaseFragment() {
         tv_location.setOnClickListener {
           var intent=Intent(requireActivity(),ChangeCityActivity::class.java)
             startActivity(intent)
-
-            findNavController().navigate(R.id.changeCityActivity2)
-
         }
 
         var myfragemts=mutableListOf<Fragment>()

@@ -7,7 +7,7 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="52dp"
-        android:background="@color/hotpink"
+        android:background="@color/colortheme"
         app:titleTextColor="#ffffff">
 
         <LinearLayout
@@ -34,7 +34,7 @@
                 android:gravity="center"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:text="Jetpack"/>
+               />
 
 
 

@@ -7,6 +7,10 @@ import com.sxc.garbage.base.BaseActivity
 import kotlinx.android.synthetic.main.toolbar_layout.*
 
 class WelcomeActivity : BaseActivity() {
+    override fun getLayoutId(): Int {
+        return R.layout.activity_welcome
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_welcome)

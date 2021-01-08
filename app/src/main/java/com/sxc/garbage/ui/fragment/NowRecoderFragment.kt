@@ -77,6 +77,7 @@ class NowRecoderFragment:BaseFragment() {
                                 if (alertDialog != null && alertDialog!!.isShowing()) {
                                     alertDialog!!.dismiss()
                                     cancelOrder(info[position].id)
+                                    myAdapter.notifyDataSetChanged()
                                 }
 
                             }).setNegativeButton("取消",{ dialog, id ->
